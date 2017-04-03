@@ -17,6 +17,107 @@ body {
 	position: relative;
 }
 
+/*START SMOOTH SCROLL NAVIGATION*/
+
+a[ id= "album" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
+
+a[ id= "galeria" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( -500px );
+    transform: translateY( -500px );
+}
+a[ id= "contacto" ]:target ~ #main article.panel {
+    -webkit-transform: translateY( -1000px );
+    transform: translateY( -1000px );
+}
+
+/*END SMOOTH SCROLL NAVIGATION*/
+
+
+
+/*START HAMBURGER NAVIGATION MENU*/
+
+/*
+.hamburger-icon {
+  margin: 10px;
+  width: 4.5rem;
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  border:1px solid black;
+}
+
+.hamburger-icon:hover,
+.hamburger-icon:active,
+.hamburger-icon:focus {
+  outline: 0;
+}
+
+.line:nth-child(1) {
+  top: 0;
+}
+
+.line:nth-child(2) {
+  top: 12px;
+}
+
+.line:nth-child(3) {
+  top: 24px;
+}
+
+.line {
+  width: 2.5rem;
+  height: .3125rem;
+  background: #44545E;
+  border-radius: 2.5rem;
+  position: absolute;
+  opacity: 1;
+  /* 1. Set the transition property */
+  /* Syntax: propertiesToAnimate animationDuration animationEffect */
+  /* Example: all .3s ease-in-out */
+
+/*  transition: all .3s ease-in-out;
+
+}
+
+/* MIDDLE line */
+
+/* .active .line:nth-child(2) { */
+  /* 2. When the active class is added to the .hamburger-icon:
+      a) Fade the middle line out (hint: you will need to update the 'opacity' property).
+      b) Move the middle line 16px to the left using a transform (hint: use translateX with a negative px value)  */
+/* opacity: 0;
+transform: translateX(-16px);
+}
+
+*/
+
+/* TOP line */
+/* .active .line:first-child { */
+  /* 3. When the active class is added to the .hamburger-icon,
+        use the transform property to do BOTH of the following:
+        a) Move the top line 12px down (hint: use translateY)
+        b) Rotate the line 135 degrees
+  */
+/* transform: translateY(12px) rotate(135deg); 
+
+} */
+
+/* BOTTOM line */
+/* .active .line:last-child { */
+  /* 3. When the active class is added to the .hamburger-icon,
+        use the transform property to do BOTH of the following:
+        a) Move the top line 12px up (hint: use translateY and a negative px value)
+        b) Rotate the line -135 degrees
+  */
+  /* transform: translateY(-12px) rotate(-135deg);
+} */
+
+/*END HAMBURGER NAVIGATION MENU*/
+
+
 /* Responsive images */
 img {
 	max-width: 100%;
@@ -147,12 +248,17 @@ td {
 	color: #FFFFFF;
 }
 
+.blue-headers {
+	color: #FFFFFF;
+	margin: 0px 0px 70px 0px;
+}
+
 .connect {
 	padding: 10px 0px 30px 0px;
 }
 
 .connect p {
-	padding: 20px 500px 40px 500px;
+	padding: 20px 500px 20px 500px;
 	margin: 0 auto;
 	text-align: center;
 	color: #44545E;
@@ -169,6 +275,13 @@ td {
 	margin: 40px;
 }
 
+#album-1 {
+	padding: 20px 530px 0px 530px;
+	margin: 0 auto;
+	text-align: center;
+	color: #44545E;
+}
+
 .album p {
 	padding: 20px 530px 40px 530px;
 	margin: 0 auto;
@@ -176,16 +289,18 @@ td {
 	color: #44545E;
 }
 
+#backstage {
+	border: 1px solid #000000;
+	width: 40%;
+	margin: 10px 30px;
+}
+
+
+
 
 /* ----------------------------------------
 Header
 ------------------------------------------- */
-.hamburger {
-	display: block;
-	text-align: right;
-
-}
-
 
 nav {
 	position: fixed;
@@ -214,7 +329,7 @@ h1 a:hover {
 
 
 /* ----------------------------------------
-Modal
+MODAL - TOUR DATES
 ------------------------------------------- */
 .modal-background {
   /*padding: 10%;*/
@@ -279,6 +394,63 @@ h4 {
 	text-align: center;
 }
 
+/* ----------------------------------------
+MODAL - CONNECT
+------------------------------------------- */
+.modal-background-connect {
+  /*padding: 10%;*/
+  background-color: rgba(0, 0, 0, .7);
+
+  /*MODAL*/
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.modal-content-connect {
+  padding: 20px 20px;
+  color: #444;
+  background-color: white;
+  width: 50%;
+  height: 75%;
+  /*MODAL*/
+  margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
+
+button#connect-close {
+  font-size: .85em;
+  font-weight: 600;
+  padding: 10px 10px;
+  cursor: pointer;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 1px;
+  outline: none;
+  background-color: #c0392b;
+  margin: 20px 0;
+}
+
+h4 {
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 8px;
+	color: #c0392b;
+	margin: 10px 0 0 0;
+
+}
 
 /* ----------------------------------------
 Footer
@@ -390,6 +562,43 @@ button#submit {
 button#submit:hover {
 	background-color: #44545E;
 	color: #FFFFFF;
+	font-weight: 400;
+	transition: all .2s ease-in-out;
+}
+
+
+
+
+button#previous {
+	/*border: 1px solid #44545E;*/
+	color: #44545E;
+	margin: 10px;
+	border-radius: 5px;
+	font-weight: 400;
+	transition: all .2s ease-in-out;
+}
+
+
+button#next {
+	/*border: 1px solid #44545E;*/
+	color: #44545E;
+	margin: 10px;
+	border-radius: 5px;
+	font-weight: 400;
+	transition: all .2s ease-in-out;
+}
+
+
+button#previous#next:hover {
+	
+}
+
+
+button#submit-connect {
+border: 1px solid #44545E;
+	color: #44545E;
+	margin: 10px;
+	border-radius: 5px;
 	font-weight: 400;
 	transition: all .2s ease-in-out;
 }

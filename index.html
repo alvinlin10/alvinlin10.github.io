@@ -18,13 +18,13 @@
 	</header>
 <!--START NAVIGATION SECTION-->
 <nav>
-<a class="hamburger" href=""><i class="fa fa-bars"></i></a>
 	<a href="index.html#home">Home</a>
-	<a href="index.html#album">Album</a>
+	<a id="album" href="index.html#album">Album</a>
 	<a href="index.html#tour">Tour</a>
 	<a href="index.html#live">Live</a>
 	<a href="index.html#about">About</a>
 	<a href="index.html#connect">Connect</a>
+	<a class="hamburger-icon" href=""></a>
 </nav>
 
 <!--END NAVIGATION SECTION-->
@@ -36,9 +36,13 @@
 <img src="images/album_cover.png">
 <h2>WIND &amp; WAVES</h2>
 <h3>Pre-Order: 4.25.2017</h3>
-<p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, asdf asdf when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-<button id="buy" type="button">BUY ON iTUNES <i class="fa fa-apple" aria-hidden="true"></i></button>
-<button id="buy" type="button">BUY IN STORE <i class="fa fa-paypal" aria-hidden="true"></i></button>
+	<p id="album-1">Life is a lot like the sea. Some days calm and tranquil, and other days, as unforgiving as a storm sweeping across. The sea gives life just as quickly as it takes it away. We often worry about how far we will be swept out to sea, or how far the winds will carry us.
+	</p>
+	<p class="text">
+	 But in the journey of being swept away, I believe we can find the anchors in our lives. This album shares a collection of songs written from real moments of joy and pain experienced in love, life, and dreams. This is the sound of hope in midst of our storms. May you find these soundtracks to be your compass in times of wander.
+	</p>
+<a href="http://www.apple.com/itunes/charts/"><button id="buy" type="button">BUY ON iTUNES <i class="fa fa-apple" aria-hidden="true"></i></button></a>
+<a href="https://play.google.com/store/music?hl=en"><button id="buy" type="button">BUY IN STORE <i class="fa fa-paypal" aria-hidden="true"></i></button></a>
 </div>
 </section>
 
@@ -46,6 +50,7 @@
 
 <!--START SECTION 2: TOUR DATES-->
 <section class="tour">
+<h2 class="blue-headers">TOUR</h2>
 <div id="table-wrapper">
   <div id="table-scroll">
     <table>
@@ -124,7 +129,21 @@
 <section class="live">
 <div>
 <h2>LIVE MUSIC</h2>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/5IZnDgpF_8M" frameborder="0" allowfullscreen></iframe></p>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5IZnDgpF_8M" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u_SwG35LNrw" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/egmEE0UJEBI" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+<button id="previous"> 
+<i class="fa fa-chevron-left fa-1" aria-hidden="true"></i>
+</button>
+
+<button id="next"> 
+<i class="fa fa-chevron-right fa-1" aria-hidden="true"></i>
+</button>
+
 </div>
 </section>
 <!--END SECTION 3: LIVE PERFORMANCE-->
@@ -132,19 +151,21 @@
 
 <!--START SECTION 4: ABOUT-->
 <section class="about">
-<h2 class="text">ABOUT</h2>
+<h2 class="blue-headers">ABOUT</h2>
 	<div class="about-wrapper">
 		<article>
-			<img src="http://placehold.it/550x350">
+			<img src="images/alvin-bio.jpg">
 		</article>
 		<article>
-			<p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-			<p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-			<p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<p class="text">Alvin is a San Francisco native - born and raised in the beautiful west coast city. He graduated from University of California, Santa Cruz with a B.A. in Business Management Economics in 2012, and pursued a career in marketing at a high-growth Silcon Valley company. In 2017, he started a project to write, record, and share music with others.</p>
+
+			<p class="text">His past twelve years have been a testament of God’s unrelenting love through his struggles with his Mom’s long battle with cancer and meaningful relationships that have changed and shaped the way he understands and shares the Gospel.</p>
+
+			 <p class="text">Alvin enjoys getting to know people and hearing their unique stories. On the weekends, you can find him exploring the Bay Area, chatting with friendly strangers, eating Japanese food, or spending time with his girlfriend Jennifer.</p>
+		
 		</article>
 	</div>
 </section>
-
 <!--END SECTION SECTION 4: ABOUT-->
 
 
@@ -153,12 +174,13 @@
 <section class="connect">
 <div>
 <h2>STAY CONNECTED</h2>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+<p>Come backstage with Alvin to follow the latest news in the studio and on tour. We'd love to stay connected and hear from fans. Staying in the loop is quick and easy - just subscribe and we'll do the rest! </p>
+<img id="backstage" src="images/backstage.jpg">
 </div>
 
 <div class="wrap">
 			<input id="email" type="text" placeholder="EMAIL ADDRESS">
-			<button id="submit" type="submit">ENTER</button>
+			<button id="submit-connect" type="submit">ENTER</button>
 			<div class="social-links">
 				<a href="https://www.facebook.com/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 				<a href="https://twitter.com/?lang=en"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
@@ -189,7 +211,7 @@
 
 <!--END FOOTER-->
 
-<!--START MODAL-->
+<!--START TOUR MODAL-->
   <div class="modal-background">
     <div class="modal-content">
       <h4>SOLD OUT</h4>  
@@ -198,7 +220,17 @@
       <button id="close">Close</button>
     </div>
   </div>
-<!--END MODAL-->
+<!--END TOUR MODAL-->
+
+<!--START CONNECT MODAL-->
+  <div class="modal-background-connect">
+    <div class="modal-content-connect">
+      <h4>WE'LL KEEP IN TOUCH</h4>  
+      <p>Thanks for staying in touch. We'll be sure to send you the latest news for Alvin.</p>
+      <button id="connect-close">Close</button>
+    </div>
+  </div>
+<!--END CONNECT MODAL-->
 
 
   <script src="js/vendor/jquery-1.11.2.min.js"></script>
