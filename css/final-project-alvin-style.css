@@ -1,6 +1,97 @@
 /* ----------------------------------------
 Base Styles
 ------------------------------------------- */
+/*START HAMBURGER NAVIGATION MENU*/
+
+.hamburger-icon {
+  /* margin: 20px 20px 20px auto;*/
+  top: 35px;
+  left: calc(100% - 140px);
+  bottom: 20px;
+  align-content: right;
+  width: 2.5rem;
+  display: block;
+  position: relative;
+  height: 30px;
+}
+
+.hamburger-icon:hover,
+.hamburger-icon:active,
+.hamburger-icon:focus {
+  outline: 0;
+}
+
+
+.line:nth-child(1) {
+  top: 0;
+}
+
+.line:nth-child(2) {
+  top: 8px;
+}
+
+.line:nth-child(3) {
+  top: 16px;
+}
+
+.line {
+    width: 2.5rem;
+    height: .3125rem;
+    background: #44545E;
+    border-radius: 2.5rem;
+    position: absolute;
+    opacity: 0.7;
+    transition: all .3s ease-in-out;
+  /* 1. Set the transition property */
+  /* Syntax: propertiesToAnimate animationDuration animationEffect */
+  /* Example: all .3s ease-in-out */
+}
+
+/* MIDDLE line */
+.active .line:nth-child(2) {
+  /* 2. When the active class is added to the .hamburger-icon:
+      a) Fade the middle line out (hint: you will need to update the 'opacity' property).
+      b) Move the middle line 16px to the left using a transform (hint: use translateX with a negative px value)  */
+  
+  opacity: 0;
+  transform: translateX(-8px);
+
+}
+
+/* TOP line */
+.active .line:first-child {
+  /* 3. When the active class is added to the .hamburger-icon,
+        use the transform property to do BOTH of the following:
+        a) Move the top line 12px down (hint: use translateY)
+        b) Rotate the line 135 degrees
+  */
+
+  transform: translateY(8px) rotate(135deg);
+  
+}
+
+/* BOTTOM line */
+.active .line:last-child {
+  /* 3. When the active class is added to the .hamburger-icon,
+        use the transform property to do BOTH of the following:
+        a) Move the top line 12px up (hint: use translateY and a negative px value)
+        b) Rotate the line -135 degrees
+  */
+
+
+  transform: translateY(-8px) rotate(-135deg);
+}
+
+
+
+
+.hide-now {
+	display: none;
+}
+
+/*END HAMBURGER NAVIGATION MENU*/
+
+
 * {
 	box-sizing: border-box;
 }
@@ -17,105 +108,6 @@ body {
 	position: relative;
 }
 
-/*START SMOOTH SCROLL NAVIGATION*/
-
-a[ id= "album" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( 0px);
-    transform: translateY( 0px );
-}
-
-a[ id= "galeria" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( -500px );
-    transform: translateY( -500px );
-}
-a[ id= "contacto" ]:target ~ #main article.panel {
-    -webkit-transform: translateY( -1000px );
-    transform: translateY( -1000px );
-}
-
-/*END SMOOTH SCROLL NAVIGATION*/
-
-
-
-/*START HAMBURGER NAVIGATION MENU*/
-
-/*
-.hamburger-icon {
-  margin: 10px;
-  width: 4.5rem;
-  display: inline-block;
-  position: relative;
-  height: 40px;
-  border:1px solid black;
-}
-
-.hamburger-icon:hover,
-.hamburger-icon:active,
-.hamburger-icon:focus {
-  outline: 0;
-}
-
-.line:nth-child(1) {
-  top: 0;
-}
-
-.line:nth-child(2) {
-  top: 12px;
-}
-
-.line:nth-child(3) {
-  top: 24px;
-}
-
-.line {
-  width: 2.5rem;
-  height: .3125rem;
-  background: #44545E;
-  border-radius: 2.5rem;
-  position: absolute;
-  opacity: 1;
-  /* 1. Set the transition property */
-  /* Syntax: propertiesToAnimate animationDuration animationEffect */
-  /* Example: all .3s ease-in-out */
-
-/*  transition: all .3s ease-in-out;
-
-}
-
-/* MIDDLE line */
-
-/* .active .line:nth-child(2) { */
-  /* 2. When the active class is added to the .hamburger-icon:
-      a) Fade the middle line out (hint: you will need to update the 'opacity' property).
-      b) Move the middle line 16px to the left using a transform (hint: use translateX with a negative px value)  */
-/* opacity: 0;
-transform: translateX(-16px);
-}
-
-*/
-
-/* TOP line */
-/* .active .line:first-child { */
-  /* 3. When the active class is added to the .hamburger-icon,
-        use the transform property to do BOTH of the following:
-        a) Move the top line 12px down (hint: use translateY)
-        b) Rotate the line 135 degrees
-  */
-/* transform: translateY(12px) rotate(135deg); 
-
-} */
-
-/* BOTTOM line */
-/* .active .line:last-child { */
-  /* 3. When the active class is added to the .hamburger-icon,
-        use the transform property to do BOTH of the following:
-        a) Move the top line 12px up (hint: use translateY and a negative px value)
-        b) Rotate the line -135 degrees
-  */
-  /* transform: translateY(-12px) rotate(-135deg);
-} */
-
-/*END HAMBURGER NAVIGATION MENU*/
 
 
 /* Responsive images */
@@ -302,6 +294,9 @@ td {
 Header
 ------------------------------------------- */
 
+
+
+
 nav {
 	position: fixed;
 	top: 0;
@@ -318,7 +313,11 @@ nav a {
 	display: inline-block;
 	border-bottom: none;
 	text-transform: uppercase;
+	transition: all .3s ease-in-out;
 }
+
+
+
 
 h1 a,
 h1 a:hover {

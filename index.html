@@ -9,29 +9,40 @@
 	<link rel="stylesheet" href="css/final-project-alvin-style.css">
 
 </head>
-<body class="">
+<body>
 
-	<header>
-		<div>
-			<h1>Alvin Lin</h1>
-		</div>
-	</header>
+
 <!--START NAVIGATION SECTION-->
 <nav>
-	<a href="index.html#home">Home</a>
-	<a id="album" href="index.html#album">Album</a>
-	<a href="index.html#tour">Tour</a>
-	<a href="index.html#live">Live</a>
-	<a href="index.html#about">About</a>
-	<a href="index.html#connect">Connect</a>
-	<a class="hamburger-icon" href=""></a>
+<a class="hamburger-icon" href="">
+	  <div class="line"></div>
+	  <div class="line"></div>
+	  <div class="line"></div>
+</a>
+<div  id="hide-nav" class="hide-now">
+	<a href="#home">Home</a>
+	<a href="#album">Album</a>
+	<a href="#tour">Tour</a>
+	<a href="#live">Live</a>
+	<a href="#about">About</a>
+	<a href="#connect">Connect</a>
+</div>
 </nav>
 
 <!--END NAVIGATION SECTION-->
 
 
+<section id="home">
+	<header>
+		<div>
+			<h1>Alvin Lin</h1>
+		</div>
+	</header>
+</section>
+
+
 <!--START SECTION 1: MUSIC ALBUM HIGHLIGHT-->
-<section class="album">
+<section class="album" id="album">
 <div>
 <img src="images/album_cover.png">
 <h2>WIND &amp; WAVES</h2>
@@ -49,7 +60,7 @@
 <!--END SECTION 1: MUSIC ALBUM HIGHLIGHT-->
 
 <!--START SECTION 2: TOUR DATES-->
-<section class="tour">
+<section class="tour" id="tour">
 <h2 class="blue-headers">TOUR</h2>
 <div id="table-wrapper">
   <div id="table-scroll">
@@ -126,7 +137,7 @@
 
 
 <!--START SECTION 3: LIVE PERFORMANCES-->
-<section class="live">
+<section class="live" id="live">
 <div>
 <h2>LIVE MUSIC</h2>
 <p>
@@ -150,7 +161,7 @@
 
 
 <!--START SECTION 4: ABOUT-->
-<section class="about">
+<section class="about" id="about">
 <h2 class="blue-headers">ABOUT</h2>
 	<div class="about-wrapper">
 		<article>
@@ -171,7 +182,7 @@
 
 
 <!--START SECTION 5: STAY CONNECTED-->
-<section class="connect">
+<section class="connect" id="connect">
 <div>
 <h2>STAY CONNECTED</h2>
 <p>Come backstage with Alvin to follow the latest news in the studio and on tour. We'd love to stay connected and hear from fans. Staying in the loop is quick and easy - just subscribe and we'll do the rest! </p>
